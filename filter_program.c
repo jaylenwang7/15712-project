@@ -8,7 +8,7 @@ struct sock_filter bpf_filter[] = {
     BPF_STMT(BPF_LD + BPF_H + BPF_ABS, 12),
     BPF_JUMP(BPF_JMP + BPF_JEQ + BPF_K, ETH_P_IP, 0, 1),
     BPF_STMT(BPF_RET + BPF_K, BPF_DROP),
-    BPF_STMT(BPF_RET + BPF_K, BPF_ALLOW),
+    BPF_STMT(BPF_RET + BPF_K, BPF_PASS),
 };
 
 struct sock_fprog bpf_program = {
