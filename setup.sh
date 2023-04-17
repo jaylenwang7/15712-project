@@ -8,4 +8,4 @@ sudo apt-get install -y g++
 sudo apt-get install -y llvm clang libclang-dev
 
 # Install dependencies for eBPF program
-sudo apt-get install bpfcc-tools linux-headers-$(uname -r)
+sudo apt-get install -y bpfcc-tools linux-headers-$(uname -r) libbpfcc-dev gcc-multilib
