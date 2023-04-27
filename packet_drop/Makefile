@@ -1,9 +1,9 @@
 
-all: recvmmsg-loop bpf-drop ebpf-drop
+all: userspace-drop bpf-drop ebpf-drop
 
-.PHONY: recvmmsg-loop
-recvmmsg-loop:
-	gcc -Wall -Wextra -O2 recvmmsg-loop.c -o recvmmsg-loop
+.PHONY: userspace-drop
+userspace-drop:
+	gcc -Wall -Wextra -O2 userspace-drop.c -o userspace-drop
 
 .PHONY: bpf-drop
 bpf-drop:
@@ -15,4 +15,4 @@ ebpf-drop:
 
 .PHONY:
 clean:
-	rm recvmmsg-loop bpf-drop ebpf-drop
+	rm userspace-drop bpf-drop ebpf-drop
