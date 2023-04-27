@@ -1,5 +1,4 @@
-DEFAULT_DEVICE := eth0
-DEVICE ?= $(DEFAULT_DEVICE)
+DEVICE ?= eth0
 
 help:
 	@echo "A ICMP ping-pong response handled by eBPF"
