@@ -12,3 +12,7 @@ To run ebpf_ping
 Then to run the ping test to the machine set up with run_ebpf
 
     ./test_ping.sh [TARGET IP] [SECONDS]
+
+To shut down ebpf
+
+    ./shutdown_ebpf.sh

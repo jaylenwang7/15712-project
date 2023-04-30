@@ -9,6 +9,9 @@ fi
 # set the DEVICE variable to the name of your network interface
 DEVICE=$(ip route | grep ${1} | awk '{print $3}')
 
+# set environment variable of the device name
+export DEVICE=$DEVICE
+
 # make scripts
 make bpf.o DEVICE=$DEVICE
 make qdisc DEVICE=$DEVICE
