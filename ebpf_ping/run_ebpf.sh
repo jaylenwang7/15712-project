@@ -8,6 +8,7 @@ fi
 
 # set the DEVICE variable to the name of your network interface
 DEVICE=$(ip route | grep ${1} | awk '{print $3}')
+echo "DEVICE: $DEVICE"
 
 # set environment variable of the device name
 export DEVICE=$DEVICE
